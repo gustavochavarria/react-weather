@@ -34,7 +34,8 @@ export default function WeatherCity({ city }) {
         return (
           <HStack
             dir="row"
-            bgColor="cyan.100"
+            bgColor="rgba(255,255,255,0.8)"
+            backdropFilter="blur(40px)"
             color="gray.700"
             my="8px"
             p="8px"
