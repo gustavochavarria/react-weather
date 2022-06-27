@@ -4,6 +4,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-4F21MZNN21');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
