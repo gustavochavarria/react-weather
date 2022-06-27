@@ -14,6 +14,7 @@ export default function LangSelector() {
         fontWeight="bold"
         cursor="pointer"
         borderRadius="4px"
+        textTransform="uppercase"
         _hover={{
           backgroundColor: 'rgba(0,0,0,0.2)',
         }}
