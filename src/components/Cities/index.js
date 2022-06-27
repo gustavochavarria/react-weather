@@ -17,7 +17,12 @@ export default function Cities() {
       backgroundColor="rgba(0,0,0,0.1)"
       borderRadius="md"
     >
-      <ButtonGroup variant="outline" spacing="4">
+      <ButtonGroup
+        variant="outline"
+        spacing="4"
+        overflowX="scroll"
+        width="100%"
+      >
         {CityModel.map(({ name }) => (
           <Button
             fontWeight="bold"

@@ -10,6 +10,7 @@ export default function LangSelector() {
   return (
     <Flex justifyContent="flex-end" fontSize="lg" py="8px">
       <Button
+        color="white"
         title="Click here to change the language"
         fontWeight="bold"
         cursor="pointer"
