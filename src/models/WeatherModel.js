@@ -1,14 +1,21 @@
+import { format } from 'date-fns';
+
 export const WeatherModel = data => {
-  const days = data.list.map(day => {
+  const days = (data?.list || []).map(day => {
     const { temp, feels_like, humidity } = day?.main || {};
-    const { main, description } = day?.weather[0] || {};
-    const datetime = new Date(day.dt * 1000);
+    const { main, description, icon } = day?.weather[0] || {};
+    const formattedDate = format(new Date(day.dt * 1000), 'MM/dd/yyyy');
 
     return {
-      temp: '',
-      datetime,
+      temp,
+      datetime: formattedDate,
+      feelsLike: feels_like,
+      humidity,
+      weather: description,
+      weatherId: main,
+      icon,
     };
   });
 
-  return {};
+  return days;
 };
