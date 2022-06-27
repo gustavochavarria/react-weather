@@ -8,6 +8,7 @@ export default function BgContainer({ children }) {
   const city = useSelector(state => state.city.value);
   const { utc } = CityModel.find(({ name }) => name === city);
 
+  // eslint-disable-next-line no-unused-vars
   const [_, currentTime] = new Date()
     .toLocaleString('en-US', {
       timeZone: utc,
