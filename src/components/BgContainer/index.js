@@ -1,7 +1,29 @@
 import { Box, Container } from '@chakra-ui/react';
 
+import { useSelector } from 'react-redux';
+
+import { CityModel } from '../../models/CityModel';
+
 export default function BgContainer({ children }) {
-  const bg = '/assets/01.jpg';
+  const city = useSelector(state => state.city.value);
+  const { utc } = CityModel.find(({ name }) => name === city);
+
+  const [_, currentTime] = new Date()
+    .toLocaleString('en-US', {
+      timeZone: utc,
+    })
+    .split(',');
+
+  const [_hour] = currentTime.trim().split(':');
+  const hour = Number(_hour);
+
+  let bg = '/assets/04.jpg';
+
+  if (hour > 6 && hour < 16) {
+    bg = '/assets/01.jpg';
+  } else if (hour > 16 && hour < 19) {
+    bg = '/assets/03.jpg';
+  }
 
   return (
     <Box
