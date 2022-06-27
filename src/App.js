@@ -5,7 +5,7 @@ import store from './redux/store';
 
 import BgContainer from './components/BgContainer';
 import Cities from './components/Cities';
-import Weather from './components/Weather';
+import WeatherHeader from './components/WeatherHeader';
 import LangSelector from './components/LangSelector';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <BgContainer>
           <LangSelector />
 
-          <Weather />
+          <WeatherHeader />
 
           <Cities />
         </BgContainer>

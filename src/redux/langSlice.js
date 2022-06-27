@@ -8,10 +8,10 @@ export const langSlice = createSlice({
   reducers: {
     switchLang: state => {
       if (state.value === 'en') {
-        return 'es';
+        state.value = 'es';
+      } else {
+        state.value = 'en';
       }
-
-      return 'en';
     },
   },
 });
