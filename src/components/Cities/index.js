@@ -24,6 +24,7 @@ export default function Cities() {
             fontSize="xl"
             key={name}
             bgColor={name === currentCity ? 'red.400' : ''}
+            color="white"
             onClick={() => dispatch(changeCity(name))}
             _hover={{
               bgColor: name === currentCity ? 'red.500' : 'red.3  00',

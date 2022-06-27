@@ -22,8 +22,6 @@ export default function WeatherCity({ city }) {
       const res = await getWeather({ ...currentCityModel, lang });
       const re = WeatherModel(res);
 
-      console.log({ re });
-
       dispatch(changeWeather(re));
     };
 
@@ -44,7 +42,7 @@ export default function WeatherCity({ city }) {
             key={`${index} - ${d.datetime}`}
           >
             <Text>{d.datetime}</Text>
-            <Text minW="80px">{d.temp}°C</Text>
+            <Text minW="80px">{Number(d?.temp || 0)}°C</Text>
             <Text>{d.weather}</Text>
           </HStack>
         );
