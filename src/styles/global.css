@@ -1,0 +1,21 @@
+.footer__love__icon {
+  color: white;
+  margin: 0 2px;
+
+  animation-name: withLove;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes withLove {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: red;
+  }
+}
