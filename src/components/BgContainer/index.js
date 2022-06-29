@@ -8,21 +8,19 @@ export default function BgContainer({ children }) {
   const city = useSelector(state => state.city.value);
   const { utc } = CityModel.find(({ name }) => name === city);
 
-  // eslint-disable-next-line no-unused-vars
-  const [_, currentTime] = new Date()
-    .toLocaleString('en-US', {
+  const [_hour] = new Date()
+    .toTimeString('en-US', {
       timeZone: utc,
     })
-    .split(',');
+    .split(':');
 
-  const [_hour] = currentTime.trim().split(':');
   const hour = Number(_hour);
 
   let bg = '/assets/04.jpg';
 
-  if (hour > 6 && hour < 16) {
+  if (hour > 5 && hour < 15) {
     bg = '/assets/01.jpg';
-  } else if (hour > 16) {
+  } else if (hour >= 15 && hour < 18) {
     bg = '/assets/03.jpg';
   }
 
