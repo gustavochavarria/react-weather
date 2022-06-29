@@ -39,8 +39,6 @@ export default function Cities() {
     handleChangeCity(CityModel[0].name);
   }, [handleChangeCity]);
 
-  console.log({ weather });
-
   return (
     <Box
       p="8px"
