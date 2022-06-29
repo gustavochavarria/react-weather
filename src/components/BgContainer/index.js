@@ -22,7 +22,7 @@ export default function BgContainer({ children }) {
 
   if (hour > 6 && hour < 16) {
     bg = '/assets/01.jpg';
-  } else if (hour > 16 && hour < 19) {
+  } else if (hour > 16) {
     bg = '/assets/03.jpg';
   }
 
