@@ -9,7 +9,7 @@ export default function BgContainer({ children }) {
   const { utc } = CityModel.find(({ name }) => name === city);
 
   const [_hour] = new Date()
-    .toTimeString('en-US', {
+    .toLocaleTimeString('en-US', {
       timeZone: utc,
     })
     .split(':');
