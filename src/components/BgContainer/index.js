@@ -9,7 +9,8 @@ export default function BgContainer({ children }) {
   const { utc } = CityModel.find(({ name }) => name === city);
 
   const [_hour] = new Date()
-    .toLocaleTimeString('en-US', {
+    //british use 24 hours
+    .toLocaleTimeString('en-GB', {
       timeZone: utc,
     })
     .split(':');
